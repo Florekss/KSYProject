@@ -34,7 +34,6 @@
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.SignUpButton = new System.Windows.Forms.Button();
             this.PasswordBox = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // LoginLabel
@@ -97,22 +96,11 @@
             this.PasswordBox.Size = new System.Drawing.Size(292, 35);
             this.PasswordBox.TabIndex = 2;
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(308, 165);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(136, 20);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Забыли пароль?";
-            // 
             // AuthenticationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(456, 286);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.PasswordBox);
             this.Controls.Add(this.SignUpButton);
             this.Controls.Add(this.PasswordLabel);
@@ -137,7 +125,6 @@
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Button SignUpButton;
         private System.Windows.Forms.TextBox PasswordBox;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

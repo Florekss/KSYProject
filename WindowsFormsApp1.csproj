@@ -58,6 +58,12 @@
     <Compile Include="AuthenticationForm.Designer.cs">
       <DependentUpon>AuthenticationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataProcessingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataProcessingForm.Designer.cs">
+      <DependentUpon>DataProcessingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,11 +78,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScientificCalculations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScientificCalculations.Designer.cs">
+      <DependentUpon>ScientificCalculations.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AuthenticationForm.resx">
       <DependentUpon>AuthenticationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataProcessingForm.resx">
+      <DependentUpon>DataProcessingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -92,6 +107,9 @@
     </Compile>
     <EmbeddedResource Include="RegForm.resx">
       <DependentUpon>RegForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScientificCalculations.resx">
+      <DependentUpon>ScientificCalculations.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

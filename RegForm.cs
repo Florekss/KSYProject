@@ -54,18 +54,16 @@ namespace WindowsFormsApp1
             {   
                 //Closing Parent Form
                 this.Close();
-                Form AuthF = new AuthenticationForm();
+                Form AuthF = Application.OpenForms[0];
                 AuthF.Show();
-                AuthF.Activate();
             }
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form AuthF = new AuthenticationForm();
+            Form AuthF = Application.OpenForms[0];
             AuthF.Show();
-            AuthF.Activate();
         }
     }
 }

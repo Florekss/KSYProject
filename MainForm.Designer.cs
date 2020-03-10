@@ -32,7 +32,6 @@
             this.DataRegistration = new System.Windows.Forms.ToolStripMenuItem();
             this.функция2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.функция3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NameLabel = new System.Windows.Forms.Label();
@@ -62,54 +61,46 @@
             this.DataRegistration,
             this.функция2ToolStripMenuItem,
             this.функция3ToolStripMenuItem,
-            this.помощьToolStripMenuItem,
             this.оПрограммеToolStripMenuItem,
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1054, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1054, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // DataRegistration
             // 
             this.DataRegistration.Name = "DataRegistration";
-            this.DataRegistration.Size = new System.Drawing.Size(194, 32);
+            this.DataRegistration.Size = new System.Drawing.Size(194, 29);
             this.DataRegistration.Text = "Регистрация данных";
             this.DataRegistration.Click += new System.EventHandler(this.Функция1ToolStripMenuItem_Click);
             // 
             // функция2ToolStripMenuItem
             // 
             this.функция2ToolStripMenuItem.Name = "функция2ToolStripMenuItem";
-            this.функция2ToolStripMenuItem.Size = new System.Drawing.Size(183, 32);
+            this.функция2ToolStripMenuItem.Size = new System.Drawing.Size(183, 29);
             this.функция2ToolStripMenuItem.Text = "Обработка данных";
             this.функция2ToolStripMenuItem.Click += new System.EventHandler(this.Функция2ToolStripMenuItem_Click);
             // 
             // функция3ToolStripMenuItem
             // 
             this.функция3ToolStripMenuItem.Name = "функция3ToolStripMenuItem";
-            this.функция3ToolStripMenuItem.Size = new System.Drawing.Size(268, 32);
+            this.функция3ToolStripMenuItem.Size = new System.Drawing.Size(268, 29);
             this.функция3ToolStripMenuItem.Text = "Научно-технические расчеты";
             this.функция3ToolStripMenuItem.Click += new System.EventHandler(this.Функция3ToolStripMenuItem_Click);
-            // 
-            // помощьToolStripMenuItem
-            // 
-            this.помощьToolStripMenuItem.Name = "помощьToolStripMenuItem";
-            this.помощьToolStripMenuItem.Size = new System.Drawing.Size(100, 32);
-            this.помощьToolStripMenuItem.Text = "Помощь";
-            this.помощьToolStripMenuItem.Click += new System.EventHandler(this.ПомощьToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(141, 32);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(141, 29);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.ОПрограммеToolStripMenuItem_Click_1);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(80, 32);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.ВыходToolStripMenuItem_Click);
             // 
@@ -117,11 +108,12 @@
             // 
             this.NameLabel.AutoSize = true;
             this.NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameLabel.Location = new System.Drawing.Point(385, 48);
+            this.NameLabel.ForeColor = System.Drawing.Color.Black;
+            this.NameLabel.Location = new System.Drawing.Point(367, 49);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(260, 29);
+            this.NameLabel.Size = new System.Drawing.Size(255, 29);
             this.NameLabel.TabIndex = 1;
-            this.NameLabel.Text = "Название процедуры";
+            this.NameLabel.Text = "Регистрация данных";
             this.NameLabel.Visible = false;
             // 
             // label1
@@ -144,6 +136,7 @@
             // 
             // StartOPROSButton
             // 
+            this.StartOPROSButton.Enabled = false;
             this.StartOPROSButton.Location = new System.Drawing.Point(27, 165);
             this.StartOPROSButton.Name = "StartOPROSButton";
             this.StartOPROSButton.Size = new System.Drawing.Size(191, 32);
@@ -274,6 +267,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Программный комплекс \"Проект KSY\"";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -289,7 +283,6 @@
         private System.Windows.Forms.ToolStripMenuItem DataRegistration;
         private System.Windows.Forms.ToolStripMenuItem функция2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem функция3ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem помощьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.Label NameLabel;

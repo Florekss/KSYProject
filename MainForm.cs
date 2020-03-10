@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,7 +28,18 @@ namespace WindowsFormsApp1
 
         private void Функция1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            bool isok;
+            isok = NameLabel.Visible;
+            if (isok == true)
+            { 
+                NameLabel.Visible = false;
+                StartOPROSButton.Enabled = false;
+            }
+            else
+            {
+                NameLabel.Visible = true;
+                StartOPROSButton.Enabled = true;
+            }
         }
 
         private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,13 +49,18 @@ namespace WindowsFormsApp1
 
         private void Функция3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
+            Form ScientificCalculationsF = new ScientificCalculations();
+            ScientificCalculationsF.Show();
+            ScientificCalculationsF.Activate();
+            this.Hide();
+        } 
 
         private void Функция2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-
+            Form DataProcessingF = new DataProcessingForm();
+            DataProcessingF.Show();
+            DataProcessingF.Activate();
+            this.Hide();
 
         }
 
@@ -64,7 +81,16 @@ namespace WindowsFormsApp1
 
         private void DateFillerButton_Click_1(object sender, EventArgs e)
         {
-            DateTextBox.Text = Convert.ToString(DateTime.Now);
+            /// filler don't work when time near 0:00-9:00 AM\PM 
+            /// #FIXME ASAP
+            DateTime localtime = DateTime.Now;
+            var culture = new CultureInfo("ru-RU");
+            DateTextBox.Text = localtime.ToString(culture);
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

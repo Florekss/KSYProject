@@ -14,12 +14,12 @@ namespace WindowsFormsApp1
         public AboutBox1()
         {
             InitializeComponent();
-            this.Text = String.Format("О программе {0}", AssemblyTitle);
-            this.labelProductName.Text = AssemblyProduct;
+            this.Text = String.Format("О программе");
+            this.labelProductName.Text = "Программный комлекс регистрации и обработки данных измерений на техническом объекте";
             this.labelVersion.Text = String.Format("Версия {0}", AssemblyVersion);
-            this.labelCopyright.Text = AssemblyCopyright;
-            this.labelCompanyName.Text = AssemblyCompany;
-            this.textBoxDescription.Text = AssemblyDescription;
+            this.labelCopyright.Text = "©2020";
+            this.labelCompanyName.Text = "ФГБОУ ВО «НИУ «МЭИ»";
+            this.textBoxDescription.Text = "Программный комплекс предназначен для исследования объектов автоматизации на модели данных, а также для анализа работы объекта с возможностью отображения данных в опрашиваемых каналах.";
         }
 
         #region Методы доступа к атрибутам сборки
