@@ -37,7 +37,10 @@ namespace WindowsFormsApp1
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
-
+            Form RegF = new RegForm();
+            RegF.Show();
+            RegF.Activate();
+            Hide();
         }
     }
 }

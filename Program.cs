@@ -16,7 +16,8 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AuthenticationForm());
+            Form AuthF = new AuthenticationForm();
+            Application.Run(AuthF);
         }
     }
 }
