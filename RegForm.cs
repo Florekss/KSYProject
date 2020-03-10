@@ -50,18 +50,22 @@ namespace WindowsFormsApp1
             DialogResult result;
             result =MessageBox.Show("Занесение пользователя в БД.","Регистрация пользователя",buttonsMB);
             //Demonstration
-            if (result == System.Windows.Forms.DialogResult.Yes)
+            if (result == System.Windows.Forms.DialogResult.OK)
             {   
                 //Closing Parent Form
                 this.Close();
+                Form AuthF = new AuthenticationForm();
+                AuthF.Show();
+                AuthF.Activate();
             }
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            Application.Restart();
-            
+            Form AuthF = new AuthenticationForm();
+            AuthF.Show();
+            AuthF.Activate();
         }
     }
 }
