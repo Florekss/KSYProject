@@ -15,11 +15,8 @@ namespace WindowsFormsApp1
         public MainForm()
         {
             InitializeComponent();
-        }
-
-        private void ОПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            string Login = "";
+            string Password = "";
         }
 
         private void ОПрограммеToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -35,7 +32,6 @@ namespace WindowsFormsApp1
 
         private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //_ = MessageBox.Show("Вы уверены, что хотите выйти?", "Выход из программы");
             Application.Exit();
         }
 
@@ -54,6 +50,21 @@ namespace WindowsFormsApp1
         private void ПомощьToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void DateFillerButton_Click(object sender, EventArgs e)
+        {
+            DateTextBox.Text = Convert.ToString(DateTime.Now);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DateFillerButton_Click_1(object sender, EventArgs e)
+        {
+            DateTextBox.Text = Convert.ToString(DateTime.Now);
         }
     }
 }

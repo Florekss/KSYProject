@@ -88,7 +88,7 @@
             this.labelProductName.Name = "labelProductName";
             this.labelProductName.Size = new System.Drawing.Size(406, 26);
             this.labelProductName.TabIndex = 19;
-            this.labelProductName.Text = "Название продукта";
+            this.labelProductName.Text = "Прогр. комплекс для сбора и регистрации данных.";
             this.labelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelVersion
@@ -100,8 +100,9 @@
             this.labelVersion.Name = "labelVersion";
             this.labelVersion.Size = new System.Drawing.Size(406, 26);
             this.labelVersion.TabIndex = 0;
-            this.labelVersion.Text = "Версия";
+            this.labelVersion.Text = "Версия 0.0.1";
             this.labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelVersion.Click += new System.EventHandler(this.labelVersion_Click);
             // 
             // labelCopyright
             // 
@@ -112,7 +113,7 @@
             this.labelCopyright.Name = "labelCopyright";
             this.labelCopyright.Size = new System.Drawing.Size(406, 26);
             this.labelCopyright.TabIndex = 21;
-            this.labelCopyright.Text = "Авторские права";
+            this.labelCopyright.Text = "© 2020";
             this.labelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelCompanyName
@@ -124,7 +125,7 @@
             this.labelCompanyName.Name = "labelCompanyName";
             this.labelCompanyName.Size = new System.Drawing.Size(406, 26);
             this.labelCompanyName.TabIndex = 22;
-            this.labelCompanyName.Text = "Название организации";
+            this.labelCompanyName.Text = "ФГБОУ ВО «НИУ «МЭИ»";
             this.labelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textBoxDescription
@@ -139,7 +140,9 @@
             this.textBoxDescription.Size = new System.Drawing.Size(406, 193);
             this.textBoxDescription.TabIndex = 23;
             this.textBoxDescription.TabStop = false;
-            this.textBoxDescription.Text = "Описание";
+            this.textBoxDescription.Text = " Программный комплекс предназначен для исследования объектов автоматизации на мод" +
+    "ели данных, а также для анализа работы объекта с возможностью отображения данных" +
+    " в опрашиваемых каналах.";
             // 
             // okButton
             // 

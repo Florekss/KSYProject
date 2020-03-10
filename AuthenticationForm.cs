@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+    
     public partial class AuthenticationForm : Form
     {
         public AuthenticationForm()
@@ -33,6 +34,7 @@ namespace WindowsFormsApp1
             MainF.Show();
             MainF.Activate();
             Hide();
+            
         }
 
         private void SignUpButton_Click(object sender, EventArgs e)
