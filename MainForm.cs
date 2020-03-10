@@ -81,11 +81,8 @@ namespace WindowsFormsApp1
 
         private void DateFillerButton_Click_1(object sender, EventArgs e)
         {
-            /// filler don't work when time near 0:00-9:00 AM\PM 
-            /// #FIXME ASAP
-            DateTime localtime = DateTime.Now;
-            var culture = new CultureInfo("ru-RU");
-            DateTextBox.Text = localtime.ToString(culture);
+
+            DateTextBox.Text = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
