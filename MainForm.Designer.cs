@@ -49,6 +49,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
+            this.FrameNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Channel1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Channel2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Channel3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Channel4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Channel5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Channel6_mean = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Channel6_disp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Channel9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Channel19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Channel49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Channel69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Channel77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +78,7 @@
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1054, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1143, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -109,7 +122,7 @@
             this.NameLabel.AutoSize = true;
             this.NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameLabel.ForeColor = System.Drawing.Color.Black;
-            this.NameLabel.Location = new System.Drawing.Point(367, 49);
+            this.NameLabel.Location = new System.Drawing.Point(450, 52);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(255, 29);
             this.NameLabel.TabIndex = 1;
@@ -143,6 +156,7 @@
             this.StartOPROSButton.TabIndex = 5;
             this.StartOPROSButton.Text = "Начать опрос";
             this.StartOPROSButton.UseVisualStyleBackColor = true;
+            this.StartOPROSButton.Click += new System.EventHandler(this.StartOPROSButton_Click);
             // 
             // LoginTextBox
             // 
@@ -226,28 +240,149 @@
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FrameNumber,
+            this.Channel1,
+            this.Channel2,
+            this.Channel3,
+            this.Channel4,
+            this.Channel5,
+            this.Channel6_mean,
+            this.Channel6_disp,
+            this.Channel9,
+            this.Channel19,
+            this.Channel49,
+            this.Channel69,
+            this.Channel77});
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dataGridView1.Location = new System.Drawing.Point(17, 216);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(833, 379);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1114, 331);
             this.dataGridView1.TabIndex = 15;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(856, 553);
+            this.button3.Location = new System.Drawing.Point(940, 553);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(191, 32);
             this.button3.TabIndex = 16;
             this.button3.Text = "Сохранить";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // FrameNumber
+            // 
+            this.FrameNumber.HeaderText = "№ Кадра";
+            this.FrameNumber.MinimumWidth = 8;
+            this.FrameNumber.Name = "FrameNumber";
+            this.FrameNumber.ReadOnly = true;
+            this.FrameNumber.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.FrameNumber.Width = 60;
+            // 
+            // Channel1
+            // 
+            this.Channel1.HeaderText = "Кан. 1";
+            this.Channel1.MinimumWidth = 8;
+            this.Channel1.Name = "Channel1";
+            this.Channel1.ReadOnly = true;
+            this.Channel1.Width = 80;
+            // 
+            // Channel2
+            // 
+            this.Channel2.HeaderText = "Кан. 2";
+            this.Channel2.MinimumWidth = 8;
+            this.Channel2.Name = "Channel2";
+            this.Channel2.ReadOnly = true;
+            this.Channel2.Width = 80;
+            // 
+            // Channel3
+            // 
+            this.Channel3.HeaderText = "Кан. 3";
+            this.Channel3.MinimumWidth = 8;
+            this.Channel3.Name = "Channel3";
+            this.Channel3.ReadOnly = true;
+            this.Channel3.Width = 80;
+            // 
+            // Channel4
+            // 
+            this.Channel4.HeaderText = "Кан. 4";
+            this.Channel4.MinimumWidth = 8;
+            this.Channel4.Name = "Channel4";
+            this.Channel4.ReadOnly = true;
+            this.Channel4.Width = 60;
+            // 
+            // Channel5
+            // 
+            this.Channel5.HeaderText = "Кан. 5";
+            this.Channel5.MinimumWidth = 8;
+            this.Channel5.Name = "Channel5";
+            this.Channel5.ReadOnly = true;
+            this.Channel5.Width = 60;
+            // 
+            // Channel6_mean
+            // 
+            this.Channel6_mean.HeaderText = "Кан. 6 СР";
+            this.Channel6_mean.MinimumWidth = 8;
+            this.Channel6_mean.Name = "Channel6_mean";
+            this.Channel6_mean.ReadOnly = true;
+            this.Channel6_mean.Width = 80;
+            // 
+            // Channel6_disp
+            // 
+            this.Channel6_disp.HeaderText = "Кан. 6_Д";
+            this.Channel6_disp.MinimumWidth = 8;
+            this.Channel6_disp.Name = "Channel6_disp";
+            this.Channel6_disp.ReadOnly = true;
+            this.Channel6_disp.Width = 80;
+            // 
+            // Channel9
+            // 
+            this.Channel9.HeaderText = "Кан. 9";
+            this.Channel9.MinimumWidth = 8;
+            this.Channel9.Name = "Channel9";
+            this.Channel9.ReadOnly = true;
+            this.Channel9.Width = 60;
+            // 
+            // Channel19
+            // 
+            this.Channel19.HeaderText = "Кан. 19";
+            this.Channel19.MinimumWidth = 8;
+            this.Channel19.Name = "Channel19";
+            this.Channel19.ReadOnly = true;
+            this.Channel19.Width = 80;
+            // 
+            // Channel49
+            // 
+            this.Channel49.HeaderText = "Кан. 49";
+            this.Channel49.MinimumWidth = 8;
+            this.Channel49.Name = "Channel49";
+            this.Channel49.ReadOnly = true;
+            this.Channel49.Width = 80;
+            // 
+            // Channel69
+            // 
+            this.Channel69.HeaderText = "Кан. 69";
+            this.Channel69.MinimumWidth = 8;
+            this.Channel69.Name = "Channel69";
+            this.Channel69.ReadOnly = true;
+            this.Channel69.Width = 80;
+            // 
+            // Channel77
+            // 
+            this.Channel77.HeaderText = "Кан. 77";
+            this.Channel77.MinimumWidth = 8;
+            this.Channel77.Name = "Channel77";
+            this.Channel77.ReadOnly = true;
+            this.Channel77.Width = 80;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 597);
+            this.ClientSize = new System.Drawing.Size(1143, 597);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label5);
@@ -300,5 +435,18 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FrameNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Channel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Channel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Channel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Channel4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Channel5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Channel6_mean;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Channel6_disp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Channel9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Channel19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Channel49;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Channel69;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Channel77;
     }
 }
