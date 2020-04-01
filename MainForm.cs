@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,8 +15,11 @@ namespace WindowsFormsApp1
         public MainForm()
         {
             InitializeComponent();
-            string Login = "";
-            string Password = "";
+        }
+
+        private void ОПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void ОПрограммеToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -28,61 +30,31 @@ namespace WindowsFormsApp1
 
         private void Функция1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bool isok;
-            isok = NameLabel.Visible;
-            if (isok == true)
-            { 
-                NameLabel.Visible = false;
-                StartOPROSButton.Enabled = false;
-            }
-            else
-            {
-                NameLabel.Visible = true;
-                StartOPROSButton.Enabled = true;
-            }
+
         }
 
         private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //_ = MessageBox.Show("Вы уверены, что хотите выйти?", "Выход из программы");
             Application.Exit();
         }
 
         private void Функция3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form ScientificCalculationsF = new ScientificCalculations();
-            ScientificCalculationsF.Show();
-            ScientificCalculationsF.Activate();
-            this.Hide();
-        } 
+
+        }
 
         private void Функция2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form DataProcessingF = new DataProcessingForm();
-            DataProcessingF.Show();
-            DataProcessingF.Activate();
-            this.Hide();
+
+
 
         }
 
         private void ПомощьToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void DateFillerButton_Click(object sender, EventArgs e)
-        {
-            DateTextBox.Text = Convert.ToString(DateTime.Now);
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DateFillerButton_Click_1(object sender, EventArgs e)
-        {
-
-            DateTextBox.Text = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
+            DateTextBox.Text = DateTime.Now.ToString();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
