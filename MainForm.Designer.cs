@@ -48,7 +48,6 @@
             this.SystemChatTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
             this.FrameNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Channel1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Channel2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +61,7 @@
             this.Channel49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Channel69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Channel77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +78,7 @@
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1143, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1297, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -122,7 +122,7 @@
             this.NameLabel.AutoSize = true;
             this.NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameLabel.ForeColor = System.Drawing.Color.Black;
-            this.NameLabel.Location = new System.Drawing.Point(450, 52);
+            this.NameLabel.Location = new System.Drawing.Point(515, 47);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(255, 29);
             this.NameLabel.TabIndex = 1;
@@ -132,7 +132,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 101);
+            this.label1.Location = new System.Drawing.Point(181, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(190, 20);
             this.label1.TabIndex = 2;
@@ -141,7 +141,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 131);
+            this.label2.Location = new System.Drawing.Point(251, 127);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 20);
             this.label2.TabIndex = 3;
@@ -150,7 +150,7 @@
             // StartOPROSButton
             // 
             this.StartOPROSButton.Enabled = false;
-            this.StartOPROSButton.Location = new System.Drawing.Point(27, 165);
+            this.StartOPROSButton.Location = new System.Drawing.Point(195, 161);
             this.StartOPROSButton.Name = "StartOPROSButton";
             this.StartOPROSButton.Size = new System.Drawing.Size(191, 32);
             this.StartOPROSButton.TabIndex = 5;
@@ -160,7 +160,7 @@
             // 
             // LoginTextBox
             // 
-            this.LoginTextBox.Location = new System.Drawing.Point(210, 101);
+            this.LoginTextBox.Location = new System.Drawing.Point(378, 97);
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.ReadOnly = true;
             this.LoginTextBox.Size = new System.Drawing.Size(132, 26);
@@ -168,14 +168,14 @@
             // 
             // FramesTextBox
             // 
-            this.FramesTextBox.Location = new System.Drawing.Point(209, 133);
+            this.FramesTextBox.Location = new System.Drawing.Point(377, 129);
             this.FramesTextBox.Name = "FramesTextBox";
             this.FramesTextBox.Size = new System.Drawing.Size(133, 26);
             this.FramesTextBox.TabIndex = 7;
             // 
             // CommentTextBox
             // 
-            this.CommentTextBox.Location = new System.Drawing.Point(471, 98);
+            this.CommentTextBox.Location = new System.Drawing.Point(639, 94);
             this.CommentTextBox.Multiline = true;
             this.CommentTextBox.Name = "CommentTextBox";
             this.CommentTextBox.Size = new System.Drawing.Size(187, 53);
@@ -184,7 +184,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(348, 104);
+            this.label3.Location = new System.Drawing.Point(516, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 20);
             this.label3.TabIndex = 9;
@@ -192,7 +192,7 @@
             // 
             // DateTextBox
             // 
-            this.DateTextBox.Location = new System.Drawing.Point(471, 165);
+            this.DateTextBox.Location = new System.Drawing.Point(639, 161);
             this.DateTextBox.Mask = "00/00/0000 90:00";
             this.DateTextBox.Name = "DateTextBox";
             this.DateTextBox.Size = new System.Drawing.Size(187, 26);
@@ -202,7 +202,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(292, 171);
+            this.label4.Location = new System.Drawing.Point(460, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(173, 20);
             this.label4.TabIndex = 11;
@@ -211,7 +211,7 @@
             // DateFillerButton
             // 
             this.DateFillerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateFillerButton.Location = new System.Drawing.Point(664, 163);
+            this.DateFillerButton.Location = new System.Drawing.Point(832, 159);
             this.DateFillerButton.Name = "DateFillerButton";
             this.DateFillerButton.Size = new System.Drawing.Size(79, 30);
             this.DateFillerButton.TabIndex = 12;
@@ -221,16 +221,16 @@
             // 
             // SystemChatTextBox
             // 
-            this.SystemChatTextBox.Location = new System.Drawing.Point(772, 98);
+            this.SystemChatTextBox.Location = new System.Drawing.Point(940, 94);
             this.SystemChatTextBox.Multiline = true;
             this.SystemChatTextBox.Name = "SystemChatTextBox";
-            this.SystemChatTextBox.Size = new System.Drawing.Size(258, 99);
+            this.SystemChatTextBox.Size = new System.Drawing.Size(258, 116);
             this.SystemChatTextBox.TabIndex = 13;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(809, 75);
+            this.label5.Location = new System.Drawing.Point(977, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(169, 20);
             this.label5.TabIndex = 14;
@@ -255,23 +255,16 @@
             this.Channel69,
             this.Channel77});
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dataGridView1.Location = new System.Drawing.Point(17, 216);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView1.RowHeadersWidth = 30;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1114, 331);
+            this.dataGridView1.Size = new System.Drawing.Size(1239, 331);
             this.dataGridView1.TabIndex = 15;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(940, 553);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(191, 32);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Сохранить";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // FrameNumber
             // 
@@ -312,7 +305,7 @@
             this.Channel4.MinimumWidth = 8;
             this.Channel4.Name = "Channel4";
             this.Channel4.ReadOnly = true;
-            this.Channel4.Width = 60;
+            this.Channel4.Width = 45;
             // 
             // Channel5
             // 
@@ -320,7 +313,7 @@
             this.Channel5.MinimumWidth = 8;
             this.Channel5.Name = "Channel5";
             this.Channel5.ReadOnly = true;
-            this.Channel5.Width = 60;
+            this.Channel5.Width = 45;
             // 
             // Channel6_mean
             // 
@@ -344,7 +337,7 @@
             this.Channel9.MinimumWidth = 8;
             this.Channel9.Name = "Channel9";
             this.Channel9.ReadOnly = true;
-            this.Channel9.Width = 60;
+            this.Channel9.Width = 45;
             // 
             // Channel19
             // 
@@ -376,13 +369,23 @@
             this.Channel77.MinimumWidth = 8;
             this.Channel77.Name = "Channel77";
             this.Channel77.ReadOnly = true;
-            this.Channel77.Width = 80;
+            this.Channel77.Width = 45;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1065, 553);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(191, 32);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "Сохранить";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 597);
+            this.ClientSize = new System.Drawing.Size(1297, 597);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label5);

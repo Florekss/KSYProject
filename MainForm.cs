@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Reflection;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -74,12 +75,13 @@ namespace WindowsFormsApp1
 
         private void DateFillerButton_Click(object sender, EventArgs e)
         {
-            DateTextBox.Text = Convert.ToString(DateTime.Now);
+            DateTextBox.Text = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-             DateTextBox.Text = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
+            DateTextBox.Text = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
+            LoginTextBox.Text = Data.EntryLogin;
         }
 
         private void DateFillerButton_Click_1(object sender, EventArgs e)
@@ -92,24 +94,63 @@ namespace WindowsFormsApp1
             Application.Exit();
         }
         
-        private void StartOPROSButton_Click(object sender, EventArgs e)
+        public void StartOPROSButton_Click(object sender, EventArgs e)
         {
+            SystemChatTextBox.Text = "Начало опроса:" + DateTime.Now.ToString("dd.MM.yyyy HH:mm") + Environment.NewLine;
+            SystemChatTextBox.Text = SystemChatTextBox.Text + "Идет опрос... " + Environment.NewLine;
             int FramesForPoll = Convert.ToInt32(FramesTextBox.Text);
             double[,] one_frame = new double[FramesForPoll,13];
             one_frame=OprosMethods.Opros(FramesForPoll);
+            Data.Experiment = one_frame;
             dataGridView1.RowCount = FramesForPoll;
             dataGridView1.ColumnCount = 13;
+            int PO = 0;
+            int KS = 0;
             for (int i = 0; i < FramesForPoll; i++)
             {
                 for (int j = 0; j < 13; j++)
                 {
-                    //пишем значения из массива в ячейки контролла
                     dataGridView1.Rows[i].Cells[j].Value = one_frame[i, j];
+                    //пишем значения из массива в ячейки контролла
+                    if (j==5)
+                    {
+                        if (one_frame[i, 5] >= 5 || one_frame[i, 5] <= 1)
+                        {
+                            dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.LightPink;
+                            PO += 1;
+                        }
+                        else
+                        {
+                            dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.Empty;
+                        }
+                    }
+                    if (j==8)
+                    {
+                        if (one_frame[i, 8] >= 999999)
+                        {
+                            dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.LightPink;
+                            KS += 1;
+                        }
+                        else
+                        {
+                            dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.Empty;
+                        }
+                    }
+
+                    
                 }
             }
+            SystemChatTextBox.Text = SystemChatTextBox.Text + "Конец опроса:" + DateTime.Now.ToString("dd.MM.yyyy HH:mm") + Environment.NewLine;
+            SystemChatTextBox.Text = SystemChatTextBox.Text + "Каналы с нарушением ПО: " + Convert.ToString(PO) + Environment.NewLine;
+            SystemChatTextBox.Text = SystemChatTextBox.Text + "Каналы с нарушением КС: " + Convert.ToString(KS);
             dataGridView1.Update();
-            //acumulation = Convert.ToString(Opros(1));
-            MessageBox.Show("Опрос Закончен.", "Это правда рабоатет?!", MessageBoxButtons.OK);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int expID = SQLMethonds.InsertIntoExperimentBD(Data.Experiment);
+            SQLMethonds.InsertIntoUnBD(expID, CommentTextBox.Text);
+            MessageBox.Show("Все записи успешно сохранены");
         }
     }
 }

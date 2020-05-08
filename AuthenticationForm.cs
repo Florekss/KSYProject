@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    
     public partial class AuthenticationForm : Form
     {
         public AuthenticationForm()
@@ -30,11 +29,27 @@ namespace WindowsFormsApp1
 
         private void SignInButton_Click(object sender, EventArgs e)
         {
-            Form MainF = new MainForm();
-            MainF.Show();
-            MainF.Activate();
-            Hide();
-            
+            if (PasswordBox.Text == "" || LoginBox.Text == "")
+            {
+                MessageBox.Show("Пожалуйста, введите логин и пароль", "Неправильнйы ввод", MessageBoxButtons.OK);
+            }
+            else
+            {
+                Data.EntryLogin = LoginBox.Text;
+                Data.EntryPassword = PasswordBox.Text;
+                bool tt = SQLMethonds.Authentication(Data.EntryLogin);
+                if (tt==true)
+                {
+                    Form MainF = new MainForm();
+                    MainF.Show();
+                    MainF.Activate();
+                    Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Доступ запрещен");
+                }
+            }
         }
 
         private void SignUpButton_Click(object sender, EventArgs e)

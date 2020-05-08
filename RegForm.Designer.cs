@@ -130,7 +130,7 @@
             this.FirstNameTextBox.Location = new System.Drawing.Point(240, 44);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(192, 26);
-            this.FirstNameTextBox.TabIndex = 8;
+            this.FirstNameTextBox.TabIndex = 1;
             this.FirstNameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // SecondNameTextBox
@@ -138,28 +138,28 @@
             this.SecondNameTextBox.Location = new System.Drawing.Point(240, 81);
             this.SecondNameTextBox.Name = "SecondNameTextBox";
             this.SecondNameTextBox.Size = new System.Drawing.Size(192, 26);
-            this.SecondNameTextBox.TabIndex = 9;
+            this.SecondNameTextBox.TabIndex = 2;
             // 
             // ThirdNameTextBox
             // 
             this.ThirdNameTextBox.Location = new System.Drawing.Point(240, 119);
             this.ThirdNameTextBox.Name = "ThirdNameTextBox";
             this.ThirdNameTextBox.Size = new System.Drawing.Size(192, 26);
-            this.ThirdNameTextBox.TabIndex = 10;
+            this.ThirdNameTextBox.TabIndex = 3;
             // 
             // LoginTextBox
             // 
             this.LoginTextBox.Location = new System.Drawing.Point(240, 156);
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.Size = new System.Drawing.Size(192, 26);
-            this.LoginTextBox.TabIndex = 11;
+            this.LoginTextBox.TabIndex = 4;
             // 
             // SecretAnswerTextBox
             // 
             this.SecretAnswerTextBox.Location = new System.Drawing.Point(240, 284);
             this.SecretAnswerTextBox.Name = "SecretAnswerTextBox";
             this.SecretAnswerTextBox.Size = new System.Drawing.Size(192, 26);
-            this.SecretAnswerTextBox.TabIndex = 12;
+            this.SecretAnswerTextBox.TabIndex = 8;
             // 
             // PrevComboBox
             // 
@@ -170,7 +170,7 @@
             this.PrevComboBox.Location = new System.Drawing.Point(240, 316);
             this.PrevComboBox.Name = "PrevComboBox";
             this.PrevComboBox.Size = new System.Drawing.Size(192, 28);
-            this.PrevComboBox.TabIndex = 13;
+            this.PrevComboBox.TabIndex = 9;
             this.PrevComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
@@ -183,7 +183,7 @@
             this.comboBox2.Location = new System.Drawing.Point(240, 248);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(192, 28);
-            this.comboBox2.TabIndex = 14;
+            this.comboBox2.TabIndex = 7;
             // 
             // ConfirmLabel
             // 
@@ -200,7 +200,7 @@
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '•';
             this.PasswordTextBox.Size = new System.Drawing.Size(191, 26);
-            this.PasswordTextBox.TabIndex = 16;
+            this.PasswordTextBox.TabIndex = 5;
             // 
             // ConfirmPaswwordTextBox
             // 
@@ -208,7 +208,8 @@
             this.ConfirmPaswwordTextBox.Name = "ConfirmPaswwordTextBox";
             this.ConfirmPaswwordTextBox.PasswordChar = '•';
             this.ConfirmPaswwordTextBox.Size = new System.Drawing.Size(191, 26);
-            this.ConfirmPaswwordTextBox.TabIndex = 17;
+            this.ConfirmPaswwordTextBox.TabIndex = 6;
+            this.ConfirmPaswwordTextBox.TextChanged += new System.EventHandler(this.ConfirmPaswwordTextBox_TextChanged);
             // 
             // AdminPasswordTextBox
             // 
@@ -279,6 +280,8 @@
             this.Controls.Add(this.FirstNameLabel);
             this.Name = "RegForm";
             this.Text = "Регистрация нового пользователя";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegForm_FormClosed);
+            this.Load += new System.EventHandler(this.RegForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
